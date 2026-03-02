@@ -64,7 +64,7 @@ flowchart TD
     A[Load profile config] --> B[Load team .so from shared_library]
     B --> C[Pick compute-suite instruction cases]
     C --> D[Interpreter semantics for each case]
-   C --> E[Call .so (GetX86Bytes)]
+   C --> E["Call .so: GetX86Bytes"]
     E --> F[Recompiler semantics from x86]
     D --> G[SMT equivalence query]
     F --> G
