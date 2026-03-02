@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+*.so
+*.dylib
+*.dll
+
+.DS_Store
+.env
+.venv/

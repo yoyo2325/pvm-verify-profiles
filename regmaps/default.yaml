@@ -1,0 +1,25 @@
+# Default PVM register mapping (matches Go recompiler x86_registers.go)
+# BaseReg = RBP (used for memory operations)
+# Scratch = RCX (used for temporary operations)
+name: default
+description: Go recompiler register mapping (BaseReg=RBP)
+
+registers:
+  r0: rax
+  r1: rdx
+  r2: rbx
+  r3: rsi
+  r4: rdi
+  r5: r8
+  r6: r9
+  r7: r10
+  r8: r11
+  r9: r12
+  r10: r13
+  r11: r14
+  r12: r15
+
+scratch:
+  - rcx
+
+base_reg: rbp

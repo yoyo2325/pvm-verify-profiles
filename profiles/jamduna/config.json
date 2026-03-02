@@ -1,0 +1,8 @@
+{
+  "group_name": "jamduna",
+  "target_version": "0.7.2",
+  "register_mapping": "default",
+  "suites": ["compute", "branch", "memory"],
+  "skip_instructions": [],
+  "shared_library": "libpvm_recompiler.so"
+}

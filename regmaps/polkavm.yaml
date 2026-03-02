@@ -1,0 +1,28 @@
+# PolkaVM register mapping (verified from actual JIT output)
+# Tested with polkavm v0.30 using MOVE_REG instruction
+# Source: polkavm-common/src/regmap.rs
+name: polkavm
+description: PolkaVM JIT compiler register mapping (v0.30, verified)
+
+# PVM register names follow PolkaVM convention:
+#   r0=RA, r1=SP, r2=T0, r3=T1, r4=T2
+#   r5=S0, r6=S1, r7=A0, r8=A1, r9=A2
+#   r10=A3, r11=A4, r12=A5
+registers:
+  r0: rbx    # RA (return address)
+  r1: rsi    # SP (stack pointer)
+  r2: r13    # T0 (temporary)
+  r3: r14    # T1 (temporary)
+  r4: r12    # T2 (temporary)
+  r5: r8     # S0 (saved)
+  r6: r9     # S1 (saved)
+  r7: rdi    # A0 (argument)
+  r8: rax    # A1 (argument)
+  r9: rdx    # A2 (argument)
+  r10: rbp   # A3 (argument)
+  r11: r10   # A4 (argument)
+  r12: r11   # A5 (argument)
+
+scratch:
+  - rcx   # TMP_REG
+  - r15   # AUX_TMP_REG

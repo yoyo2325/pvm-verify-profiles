@@ -1,0 +1,18 @@
+{
+  "group_name": "polkajam",
+  "target_version": "0.8.0",
+  "register_mapping": "polkavm",
+  "suites": ["compute"],
+  "skip_instructions": [
+    "DIV_S_32",
+    "DIV_S_64",
+    "DIV_U_32",
+    "DIV_U_64",
+    "REM_S_32",
+    "REM_S_64",
+    "REM_U_32",
+    "REM_U_64",
+    "REVERSE_BYTES"
+  ],
+  "shared_library": "libpvm_recompiler.so"
+}
