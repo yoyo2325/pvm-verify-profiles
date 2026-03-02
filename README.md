@@ -64,7 +64,7 @@ flowchart TD
     A[Load profile config] --> B[Load team .so from shared_library]
     B --> C[Pick compute-suite instruction cases]
     C --> D[Interpreter semantics for each case]
-    C --> E[Call .so and get x86 bytes]
+   C --> E[Call .so (GetX86Bytes)]
     E --> F[Recompiler semantics from x86]
     D --> G[SMT equivalence query]
     F --> G
@@ -80,7 +80,7 @@ Per-case logic:
    - `opcode + operands` test case
    - profile settings (`target_version`, `register_mapping`, `skip_instructions`, `shared_library`)
 2. Recompiler path:
-   - call your `.so` -> get x86 bytes
+   - call your `.so` (`GetX86Bytes`) -> x86 bytes
    - decode to symbolic semantics
 3. Interpreter path:
    - build expected PVM semantics for the same case
